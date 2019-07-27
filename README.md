@@ -1,4 +1,4 @@
-# JavaFX-Point-of-Sales with Inventory Management System by Karl Saycon
+# JavaFX-Point-of-Sales
 Point of Sales with inventory management system 
 
 The MIT License (MIT)
