@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 public class EditController implements Initializable, ProductInterface {
 
     @FXML
-    private TextField nameField, itemcodeField, whpriceField, SixtyDaysField, OneTwentyDaysField, priceField, quantityField;
+    private TextField nameField, itemcodeField, whpriceField, SixtyDaysField, OneTwentyDaysField, priceField, quantityField, uomField;
     @FXML
     private TextArea descriptionArea;
     @FXML
@@ -80,6 +80,7 @@ public class EditController implements Initializable, ProductInterface {
                     product.getId(),
                     itemcodeField.getText(),
                     nameField.getText(),
+                    uomField.getText(),
                     Double.parseDouble(priceField.getText()),
                     Double.parseDouble(whpriceField.getText()),
                     Double.parseDouble(SixtyDaysField.getText()),

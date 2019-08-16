@@ -58,6 +58,7 @@
                   <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Product" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
@@ -110,6 +111,12 @@
                   <TextField fx:id="itemcodeField" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Unit of Measure" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+                  <TextField fx:id="uomField" prefHeight="25.0" prefWidth="493.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <GridPane.margin>
+                        <Insets right="300.0" />
                      </GridPane.margin>
                   </TextField>
                </children>

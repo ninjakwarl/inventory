@@ -23,6 +23,8 @@ public class Product implements Serializable {
     private String itemCode;
     @Column(name = "name")
     private String productName;
+    @Column(name = "uom")
+    private String UOM;
     @Column(name = "price")
     private double price;
     @Column(name = "quantity")
@@ -47,9 +49,10 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(long id,  String itemCode, String productName, double whPrice, double price, double SixtyDays, double OneTwentyDays,double quantity, String description, Category category, Supplier supplier) {
+    public Product(long id,  String itemCode, String UOM, String productName, double whPrice, double price, double SixtyDays, double OneTwentyDays,double quantity, String description, Category category, Supplier supplier) {
         this.id = id;
         this.productName = productName;
+        this.UOM = UOM;
         this.itemCode = itemCode;
         this.price = price;
         this.whPrice = whPrice;
@@ -62,9 +65,10 @@ public class Product implements Serializable {
         
     }
 
-    public Product(String productName, String itemCode, double price, double whPrice, double SixtyDays, double OneTwentyDays, double quantity, String description, Category category, Supplier supplier) {
+    public Product(String productName, String itemCode, String UOM, double price, double whPrice, double SixtyDays, double OneTwentyDays, double quantity, String description, Category category, Supplier supplier) {
         this.productName = productName;
         this.itemCode = itemCode;
+        this.UOM = UOM;
         this.price = price;
         this.whPrice = whPrice;
         this.SixtyDays = SixtyDays;
@@ -175,6 +179,15 @@ public class Product implements Serializable {
         this.whPrice = whPrice;
     }
     
+    public String getUOM() {
+        return UOM;
+    }
+
+    public void setUOM(String UOM) {
+        this.UOM = UOM;
+    }
+
+    
     @Override
     public String toString() {
         return "Product{" + "id=" + id + 
@@ -189,4 +202,5 @@ public class Product implements Serializable {
                 ", category=" + category + 
                 ", supplier=" + supplier + '}';
     }
+
 }
