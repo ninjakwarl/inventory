@@ -75,6 +75,7 @@ public class ProductModel implements ProductDao {
         p.setWhPrice(product.getWhPrice());
         p.setSixtyDays(product.getSixtyDays());
         p.setOneTwentyDays(product.getOneTwentyDays());
+        p.setUOM(product.getUOM());
         session.getTransaction().commit();
     }
     

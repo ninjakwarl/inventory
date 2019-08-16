@@ -83,7 +83,8 @@
                               <TableColumn fx:id="whpriceColumn" prefWidth="75.0" text="Wholesale Price" />
                               <TableColumn fx:id="SixtyDaysColumn" prefWidth="75.0" text="60 Days Price" />
                               <TableColumn fx:id="OneTwentyDaysColumn" prefWidth="75.0" text="120 Days Price" />
-                              <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Stock Quantity" />
+                              <TableColumn fx:id="quantityColumn" prefWidth="153.0" text="Stock Quantity" />
+                              <TableColumn fx:id="uomColumn" prefWidth="72.0" text="UOM" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

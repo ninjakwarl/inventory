@@ -49,7 +49,7 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(long id,  String itemCode, String UOM, String productName, double whPrice, double price, double SixtyDays, double OneTwentyDays,double quantity, String description, Category category, Supplier supplier) {
+    public Product(long id,  String itemCode, String productName, double whPrice, double price, double SixtyDays, double OneTwentyDays,double quantity, String UOM, String description, Category category, Supplier supplier) {
         this.id = id;
         this.productName = productName;
         this.UOM = UOM;
@@ -65,7 +65,7 @@ public class Product implements Serializable {
         
     }
 
-    public Product(String productName, String itemCode, String UOM, double price, double whPrice, double SixtyDays, double OneTwentyDays, double quantity, String description, Category category, Supplier supplier) {
+    public Product(String productName, String itemCode, double price, double whPrice, double SixtyDays, double OneTwentyDays, double quantity, String UOM, String description, Category category, Supplier supplier) {
         this.productName = productName;
         this.itemCode = itemCode;
         this.UOM = UOM;

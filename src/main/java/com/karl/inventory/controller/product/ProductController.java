@@ -51,7 +51,7 @@ public class ProductController implements Initializable, ProductInterface {
     @FXML
     private TableColumn<Product, Long> idColumn;
     @FXML
-    private TableColumn<Product, String> categoryColumn,nameColumn, itemcodeColumn, supplierColumn, descriptionColumn;
+    private TableColumn<Product, String> categoryColumn,nameColumn, itemcodeColumn, supplierColumn, descriptionColumn, uomColumn;
     @FXML
     private TableColumn<Product, Double> 
             priceColumn,
@@ -100,8 +100,9 @@ public class ProductController implements Initializable, ProductInterface {
         whpriceColumn.setCellValueFactory(new PropertyValueFactory<>("whPrice"));
         SixtyDaysColumn.setCellValueFactory(new PropertyValueFactory<>("SixtyDays"));
         OneTwentyDaysColumn.setCellValueFactory(new PropertyValueFactory<>("OneTwentyDays"));
+        uomColumn.setCellValueFactory(new PropertyValueFactory<>("UOM"));
         productTable.setItems(PRODUCTLIST);
-
+        
         filterData();
 
         productTable.getSelectionModel().selectedItemProperty().addListener(

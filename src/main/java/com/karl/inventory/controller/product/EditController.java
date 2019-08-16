@@ -65,7 +65,7 @@ public class EditController implements Initializable, ProductInterface {
         OneTwentyDaysField.setText(String.valueOf(product.getOneTwentyDays()));
         quantityField.setText(String.valueOf(product.getQuantity()));
         descriptionArea.setText(String.valueOf(product.getDescription()));
-        
+        uomField.setText(String.valueOf(product.getUOM()));
         categoryBox.getSelectionModel().select(((int) product.getCategory().getId()) - 1);
         supplierBox.getSelectionModel().select(((int) product.getSupplier().getId()) - 1);
     }
@@ -80,12 +80,12 @@ public class EditController implements Initializable, ProductInterface {
                     product.getId(),
                     itemcodeField.getText(),
                     nameField.getText(),
-                    uomField.getText(),
                     Double.parseDouble(priceField.getText()),
                     Double.parseDouble(whpriceField.getText()),
                     Double.parseDouble(SixtyDaysField.getText()),
                     Double.parseDouble(OneTwentyDaysField.getText()),
                     Double.parseDouble(quantityField.getText()),
+                    uomField.getText(),
                     descriptionArea.getText(),
                     category,
                     supplier
@@ -113,6 +113,7 @@ public class EditController implements Initializable, ProductInterface {
         OneTwentyDaysField.setText("");
         quantityField.setText("");
         descriptionArea.setText("");
+        uomField.setText("");
         categoryBox.valueProperty().setValue(null);
         supplierBox.valueProperty().setValue(null);
     }
@@ -132,6 +133,10 @@ public class EditController implements Initializable, ProductInterface {
         
         if (nameField.getText() == null || nameField.getText().length() == 0) {
             errorMessage += "Not valid name!\n";
+        }
+        
+        if (uomField.getText() == null || uomField.getText().length() == 0) {
+            errorMessage += "Not Valid UOM Please set!\n";
         }
         
         if (priceField.getText() == null || priceField.getText().length() == 0) {

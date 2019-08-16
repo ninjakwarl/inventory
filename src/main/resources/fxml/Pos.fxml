@@ -57,7 +57,7 @@
                         <Insets bottom="5.0" />
                      </VBox.margin>
                   </TextField>
-                  <TableView fx:id="productTableView" layoutX="14.0" layoutY="45.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView fx:id="productTableView" layoutX="14.0" layoutY="45.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="633.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="itemcodeColumn" editable="false" prefWidth="93.4638671875" text="Item Code" />
                       <TableColumn fx:id="productColumn" editable="false" prefWidth="154.59100341796875" text="Products" />
@@ -65,7 +65,8 @@
                         <TableColumn fx:id="whpriceColumn" editable="false" prefWidth="90.0086669921875" text="Wholesale" />
                         <TableColumn fx:id="SixtyDays" editable="false" prefWidth="70.345703125" text="60Days" />
                         <TableColumn fx:id="OneTwentyDays" editable="false" prefWidth="77.78216552734375" text="120Days" />
-                        <TableColumn fx:id="stocksColumn" editable="false" prefWidth="87.345703125" text="Stock Qty" />
+                        <TableColumn fx:id="stocksColumn" editable="false" prefWidth="97.0" text="Stock Qty" />
+                        <TableColumn fx:id="uomColumn" editable="false" prefWidth="60.0" text="UOM" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

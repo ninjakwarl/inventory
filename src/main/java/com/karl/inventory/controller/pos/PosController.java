@@ -43,7 +43,7 @@ public class PosController implements Initializable, ProductInterface {
     @FXML
     private TableColumn<Product, String> productColumn,pricesColumn, whpriceColumn, SixtyDays, OneTwentyDays;
     @FXML
-    private TableColumn<Item, String> itemColumn, itemcodeColumn;
+    private TableColumn<Item, String> itemColumn, itemcodeColumn, uomColumn;
     @FXML
     private TableColumn<Item, Double> priceColumn, quantityColumn, totalColumn, stocksColumn;
     @FXML
@@ -76,6 +76,7 @@ public class PosController implements Initializable, ProductInterface {
               SixtyDays.setCellValueFactory(new PropertyValueFactory<>("SixtyDays"));
               stocksColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
                 OneTwentyDays.setCellValueFactory(new PropertyValueFactory<>("OneTwentyDays"));
+                uomColumn.setCellValueFactory(new PropertyValueFactory<>("UOM"));
         productTableView.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showDetails(newValue));
         productTableView.setItems(PRODUCTLIST);

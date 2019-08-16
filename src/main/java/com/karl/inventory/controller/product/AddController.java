@@ -57,12 +57,12 @@ public class AddController implements Initializable, ProductInterface {
             Product product = new Product(
                     nameField.getText(),
                     itemcodeField.getText(),
-                    uomField.getText(),
                     Double.parseDouble(priceField.getText()),
                     Double.parseDouble(whpriceField.getText()),
                     Double.parseDouble(SixtyDaysField.getText()),
                     Double.parseDouble(OneTwentyDaysField.getText()),
                     Double.parseDouble(quantityField.getText()),
+                    uomField.getText(),
                     descriptionArea.getText(),
                     category,
                     supplier
@@ -92,6 +92,7 @@ public class AddController implements Initializable, ProductInterface {
         OneTwentyDaysField.setText("");
         quantityField.setText("");
         descriptionArea.setText("");
+        uomField.setText("");
         categoryBox.valueProperty().setValue(null);
     }
 
@@ -101,6 +102,10 @@ public class AddController implements Initializable, ProductInterface {
 
         if (nameField.getText() == null || nameField.getText().length() == 0) {
             errorMessage += "Not valid name!\n";
+        }
+        
+        if (uomField.getText() == null || uomField.getText().length() == 0) {
+            errorMessage += "Not valid UOM Please Set!\n";
         }
         
         if (itemcodeField.getText() == null || itemcodeField.getText().length() == 0) {
